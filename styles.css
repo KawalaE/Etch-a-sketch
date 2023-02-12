@@ -1,0 +1,10 @@
+.square{
+    height: 1cm;
+    width: 1cm;
+    outline: 0.065cm solid black;
+    background-color: white;
+}
+
+.grid{
+    display: flex;
+}
