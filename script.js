@@ -16,3 +16,8 @@ for (let i = 0; i < numOfSquares; i++){
 
 }
 
+let squares = document.querySelectorAll('.square');
+
+squares.forEach((square) => {
+    square.addEventListener('mouseover', () => square.classList.add('active'));
+})
