@@ -1,7 +1,7 @@
 let grid = document.querySelector('.grid');
 let verticalArray = [];
 let horizontalArray = [];
-
+let mouseDown = 0;
 let numOfSquares = 16;
 
 for (let i = 0; i < numOfSquares; i++){
@@ -15,9 +15,22 @@ for (let i = 0; i < numOfSquares; i++){
     }
 
 }
+document.addEventListener('mousedown', () =>{
+    mouseDown = 1;
+})
+document.addEventListener('mouseup', () => {
+    mouseDown = 0;  
+})
 
 let squares = document.querySelectorAll('.square');
-
 squares.forEach((square) => {
-    square.addEventListener('mouseover', () => square.classList.add('active'));
+    square.addEventListener('click', () => square.classList.add('active'));
+    square.addEventListener('mouseover', () => {
+        if(mouseDown){square.classList.add('active')}
+        });
 })
+
+
+
+
+
