@@ -1,12 +1,34 @@
-.square{
-    height: 35px;
-    width: 35px;
+.grid > {
+    width: 600px;
+    height: 600px;
+    font-display: flex;
+    justify-content: center;
+}
+.minSquare{
+    height: 50px;
+    width: 50px;
     border: 1px solid black;
     background-color: white;
     border-collapse: collapse;
 }
 
-.grid{ 
+.midSquare{
+    height: 37.5px;
+    width: 37.5px;
+    border: 1px solid black;
+    background-color: white;
+    border-collapse: collapse;
+}
+
+.largeSquare{
+    height: 18.75px;
+    width: 18.75px;
+    border: 1px solid black;
+    background-color: white;
+    border-collapse: collapse;
+}
+
+.grid { 
     display: flex;
     justify-content: center;
     margin-top: 100px;
