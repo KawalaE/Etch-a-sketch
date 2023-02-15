@@ -1,7 +1,7 @@
 let verticalArray = [];
 let horizontalArray = [];
 let mouseDown = 0;
-
+let colorClass = 'active';
 let child = document.getElementsByClassName('grid');
 
 function drawSquares(squareInfo){
@@ -10,10 +10,10 @@ function drawSquares(squareInfo){
     
     let squares = document.querySelectorAll(squareInfo);
     squares.forEach((square) => {
-        console.log('in');
-        square.addEventListener('click', () => square.classList.add('active'));
+        colorChoice();
+        square.addEventListener('click', () => square.classList.add(colorClass));
         square.addEventListener('mouseover', () => {
-            if(mouseDown){square.classList.add('active')}});
+            if(mouseDown){square.classList.add(colorClass)}});
     })
 }
 
@@ -35,6 +35,36 @@ function createGrid(resolution, squareDimension){
     }
 }
 
+function colorChoice(){
+
+    let yellow = document.querySelector('.yellow');
+    yellow.addEventListener('click', () => colorClass = 'yellow');
+
+    let orange = document.querySelector('.orange');
+    orange.addEventListener('click', () => colorClass = 'orange');
+
+    let red = document.querySelector('.red');
+    red.addEventListener('click', () => colorClass = 'red');
+
+    let blue = document.querySelector('.blue');
+    blue.addEventListener('click', () => colorClass = 'blue');
+
+    let green = document.querySelector('.green');
+    green.addEventListener('click', () => colorClass = 'green');
+
+    let purple = document.querySelector('.purple');
+    purple.addEventListener('click', () => colorClass = 'purple');
+
+    let grey = document.querySelector('.grey');
+    grey.addEventListener('click', () => colorClass = 'grey');
+
+    let brown = document.querySelector('.brown');
+    brown.addEventListener('click', () => colorClass = 'brown');
+
+    let black = document.querySelector('.black');
+    black.addEventListener('click', () => colorClass = 'black');
+
+}
 numOfSquares = 12;
 createGrid(numOfSquares, 'minSquare');
 drawSquares('.minSquare');
