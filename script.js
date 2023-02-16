@@ -3,6 +3,8 @@ let horizontalArray = [];
 let mouseDown = 0;
 let colorClass = 'active';
 let child = document.getElementsByClassName('grid');
+let pageContent = document.querySelector('.page-content');
+
 
 function drawSquares(squareInfo){
     document.addEventListener('mousedown', () => mouseDown = 1);
@@ -20,7 +22,7 @@ function drawSquares(squareInfo){
 function createGrid(resolution, squareDimension){
     let grid = document.createElement('div');
     grid.classList.add('grid')
-    document.body.appendChild(grid);
+    pageContent.appendChild(grid);
 
     for (let i = 0; i < resolution; i++){
         verticalArray[i] = document.createElement('div');
@@ -64,14 +66,19 @@ function colorChoice(){
     let black = document.querySelector('.black');
     black.addEventListener('click', () => colorClass = 'black');
 
+    let eraser = document.querySelector('.eraser');
+    eraser.addEventListener('click', () => colorClass = 'eraser'); 
+
 }
 numOfSquares = 12;
 createGrid(numOfSquares, 'minSquare');
 drawSquares('.minSquare');
 
+
+
 let smallSquare = document.querySelector('.res12');
     smallSquare.addEventListener('click', () => { 
-    document.body.removeChild(child[0]);
+    pageContent.removeChild(child[0]);
     numOfSquares = 12;
     createGrid(numOfSquares, 'minSquare');
     drawSquares('.minSquare');
@@ -79,7 +86,7 @@ let smallSquare = document.querySelector('.res12');
 
 let medSquare = document.querySelector('.res16');
     medSquare.addEventListener('click', () => {
-    document.body.removeChild(child[0]);
+    pageContent.removeChild(child[0]);
     numOfSquares = 16;
     createGrid(numOfSquares, 'midSquare');
     drawSquares('.midSquare');
@@ -87,7 +94,7 @@ let medSquare = document.querySelector('.res16');
 
 let largeSquare = document.querySelector('.res32');
     largeSquare.addEventListener('click', () => {
-    document.body.removeChild(child[0]);
+    pageContent.removeChild(child[0]);
     numOfSquares = 32;
     createGrid(numOfSquares, 'largeSquare');
     drawSquares('.largeSquare');
