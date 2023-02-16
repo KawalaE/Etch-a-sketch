@@ -9,13 +9,17 @@ let pageContent = document.querySelector('.page-content');
 function drawSquares(squareInfo){
     document.addEventListener('mousedown', () => mouseDown = 1);
     document.addEventListener('mouseup', () => mouseDown = 0);
-    
+    colorChoice();
     let squares = document.querySelectorAll(squareInfo);
     squares.forEach((square) => {
-        colorChoice();
-        square.addEventListener('click', () => square.classList.add(colorClass));
+        square.addEventListener('click', () => {
+        square.classList.remove("yellow","orange","red", "blue", "green", "purple", "grey", "brown", "black", "eraser");
+        square.classList.add(colorClass)});
+        console.log(square.classList);
         square.addEventListener('mouseover', () => {
-            if(mouseDown){square.classList.add(colorClass)}});
+            if(mouseDown){
+                square.classList.remove("yellow","orange","red", "blue", "green", "purple", "grey", "brown", "black", "eraser");
+                square.classList.add(colorClass)}});
     })
 }
 
