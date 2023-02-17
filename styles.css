@@ -14,10 +14,54 @@ p{
     font-size: 60px;
     
 }
+h1{
+    margin-bottom: 5px;
+}
+.pen-color > div{
+    margin-bottom: 5px;
+}
+.warm-tones > button{
+    padding: 15px 20px;
+    border-radius: 25%;
+}
+.cold-tones > button{
+    padding: 15px 20px;
+    border-radius: 25%;
+}
+
+.other > button{
+    padding: 15px 20px;
+    border-radius: 25%;
+}
+.resolution > button{
+    padding: 10px 15px;
+    border-radius: 25%;
+    background-color: #ca8aff;
+    color: rgba(45,47,205,1) ;
+}
+.additional-options > button{
+    padding: 10px 15px;
+    border-radius: 25%;
+    background-color: #ca8aff;
+    color: rgba(45,47,205,1) ;
+}
 
 .grid > {
     font-display: flex;
     justify-content: center;
+}
+.panel, .pen-color, .additional-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.additional-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 .minSquare{
     height: 50px;
@@ -68,28 +112,28 @@ p{
     background-color: yellow;
 }
 .orange{
-    background-color: orange;
+    background-color: #fea444;
 }
 .red{
-    background-color: red;
+    background-color: #ff0534;
 }
 .blue{
-    background-color: blue;
+    background-color: #01c4e7;
 }
 .green{
-    background-color: green;
+    background-color: #2ef8a0;
 }
 .purple{
-    background-color: purple;
+    background-color: #c501e2;
 }
-.grey{
-    background-color: grey;
+.pink{
+    background-color: #f82d97;
 }
 .brown{
-    background-color: brown;
+    background-color: #704a50;
 }
 .black{
-    background-color: black;
+    background-color: rgb(92, 86, 86);
 }
 
 .eraser{

@@ -13,12 +13,12 @@ function drawSquares(squareInfo){
     let squares = document.querySelectorAll(squareInfo);
     squares.forEach((square) => {
         square.addEventListener('click', () => {
-        square.classList.remove("yellow","orange","red", "blue", "green", "purple", "grey", "brown", "black", "eraser");
+        square.classList.remove("yellow","orange","red", "blue", "green", "purple", "pink", "brown", "black", "eraser");
         square.classList.add(colorClass)});
         console.log(square.classList);
         square.addEventListener('mouseover', () => {
             if(mouseDown){
-                square.classList.remove("yellow","orange","red", "blue", "green", "purple", "grey", "brown", "black", "eraser");
+                square.classList.remove("yellow","orange","red", "blue", "green", "purple", "pink", "brown", "black", "eraser");
                 square.classList.add(colorClass)}});
     })
 }
@@ -61,8 +61,8 @@ function colorChoice(){
     let purple = document.querySelector('.purple');
     purple.addEventListener('click', () => colorClass = 'purple');
 
-    let grey = document.querySelector('.grey');
-    grey.addEventListener('click', () => colorClass = 'grey');
+    let pink = document.querySelector('.pink');
+    pink.addEventListener('click', () => colorClass = 'pink');
 
     let brown = document.querySelector('.brown');
     brown.addEventListener('click', () => colorClass = 'brown');
