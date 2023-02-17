@@ -74,22 +74,22 @@ function colorChoice(){
     eraser.addEventListener('click', () => colorClass = 'eraser'); 
 
 }
+
 numOfSquares = 12;
 createGrid(numOfSquares, 'minSquare');
 drawSquares('.minSquare');
 
-
-
 let smallSquare = document.querySelector('.res12');
-    smallSquare.addEventListener('click', () => { 
+smallSquare.addEventListener('click', () => { 
     pageContent.removeChild(child[0]);
     numOfSquares = 12;
     createGrid(numOfSquares, 'minSquare');
     drawSquares('.minSquare');
+
 })
 
 let medSquare = document.querySelector('.res16');
-    medSquare.addEventListener('click', () => {
+medSquare.addEventListener('click', () => {
     pageContent.removeChild(child[0]);
     numOfSquares = 16;
     createGrid(numOfSquares, 'midSquare');
@@ -97,7 +97,7 @@ let medSquare = document.querySelector('.res16');
 })
 
 let largeSquare = document.querySelector('.res32');
-    largeSquare.addEventListener('click', () => {
+largeSquare.addEventListener('click', () => {
     pageContent.removeChild(child[0]);
     numOfSquares = 32;
     createGrid(numOfSquares, 'largeSquare');
