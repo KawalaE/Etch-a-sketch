@@ -13,12 +13,12 @@ function drawSquares(squareInfo){
     let squares = document.querySelectorAll(squareInfo);
     squares.forEach((square) => {
         square.addEventListener('click', () => {
-        square.classList.remove("yellow","orange","red", "blue", "green", "purple", "pink", "brown", "black", "eraser", "acid");
+        square.classList.remove("yellow","orange","red", "blue", "green", "purple", "pink", "brown", "black", "eraser", "party");
         square.classList.add(colorClass)});
         console.log(square.classList);
         square.addEventListener('mouseover', () => {
             if(mouseDown){
-                square.classList.remove("yellow","orange","red", "blue", "green", "purple", "pink", "brown", "black", "eraser", "acid");
+                square.classList.remove("yellow","orange","red", "blue", "green", "purple", "pink", "brown", "black", "eraser", "party");
                 square.classList.add(colorClass)}});
     })
 }
@@ -73,8 +73,8 @@ function colorChoice(){
     let eraser = document.querySelector('.eraser');
     eraser.addEventListener('click', () => colorClass = 'eraser'); 
     
-    let acid = document.querySelector('.acid');
-    acid.addEventListener('click', () => colorClass = 'acid');
+    let party = document.querySelector('.party');
+    party.addEventListener('click', () => colorClass = 'party');
 
 }
 

@@ -2,7 +2,7 @@ body{
     background-image: radial-gradient(circle, rgba(148,60,218,1) 0%, rgba(45,47,205,1) 100%);;
 }
 p, h1{
-    text-shadow: 1px 1px white;
+    text-shadow: 2px 2px rgb(62, 30, 151);
     color: #FB2576;
     display: flex;
     justify-content: center;
@@ -50,7 +50,10 @@ h1{
     align-items: center;
     gap: 5px;
 }
-
+.additional-options > button{
+    width: 50%;
+    table-layout: fixed;
+}
 
 .minSquare{
     height: 48px;
@@ -91,9 +94,6 @@ h1{
     gap: 50px;
 
 }
-.active{
-    background-color: black;
-}
 
 .yellow{
     background-color: yellow;
@@ -127,7 +127,7 @@ h1{
     background-color: white;
 }
 
-.acid{
+.party{
     animation: 10000ms ease-in-out infinite color-change;
 }
 
