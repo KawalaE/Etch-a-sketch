@@ -1,10 +1,10 @@
 let verticalArray = [];
 let horizontalArray = [];
 let mouseDown = 0;
-let colorClass = 'active';
+let colorClass = 'black';
 let child = document.getElementsByClassName('grid');
 let pageContent = document.querySelector('.page-content');
-
+let clearAll = document.querySelector('.clear-all');
 
 function drawSquares(squareInfo){
     document.addEventListener('mousedown', () => mouseDown = 1);
@@ -81,32 +81,46 @@ function colorChoice(){
 numOfSquares = 12;
 createGrid(numOfSquares, 'minSquare');
 drawSquares('.minSquare');
+clearAll.addEventListener('click', () => drawSmallGrid())
 
-let smallSquare = document.querySelector('.res12');
-smallSquare.addEventListener('click', () => { 
+function drawSmallGrid(){
     pageContent.removeChild(child[0]);
     numOfSquares = 12;
     createGrid(numOfSquares, 'minSquare');
     drawSquares('.minSquare');
+}
 
-})
-
-let medSquare = document.querySelector('.res16');
-medSquare.addEventListener('click', () => {
+function drawMedGrid(){
     pageContent.removeChild(child[0]);
     numOfSquares = 16;
     createGrid(numOfSquares, 'midSquare');
     drawSquares('.midSquare');
-})
+}
 
-let largeSquare = document.querySelector('.res32');
-largeSquare.addEventListener('click', () => {
+function drawLargeGrid(){
     pageContent.removeChild(child[0]);
     numOfSquares = 32;
     createGrid(numOfSquares, 'largeSquare');
     drawSquares('.largeSquare');
+}
+
+let smallSquare = document.querySelector('.res12');
+smallSquare.addEventListener('click', () => {
+    drawSmallGrid();
+    clearAll.addEventListener('click', () => drawSmallGrid())
 })
 
+let medSquare = document.querySelector('.res16');
+medSquare.addEventListener('click', () => {
+    drawMedGrid();
+    clearAll.addEventListener('click', () => drawMedGrid())
+})
+
+let largeSquare = document.querySelector('.res32');
+largeSquare.addEventListener('click', () => {
+    drawLargeGrid();
+    clearAll.addEventListener('click', () => drawLargeGrid())
+})
 
 
 
