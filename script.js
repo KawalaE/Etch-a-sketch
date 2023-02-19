@@ -37,9 +37,7 @@ function createGrid(resolution, squareDimension){
             horizontalArray[j].classList.add(squareDimension);
             verticalArray[i].appendChild(horizontalArray[j]);
         }
-
     }
-
 }
 
 function colorChoice(){
@@ -122,6 +120,3 @@ largeSquare.addEventListener('click', () => {
     drawLargeGrid();
     clearAll.addEventListener('click', () => drawLargeGrid())
 })
-
-
-

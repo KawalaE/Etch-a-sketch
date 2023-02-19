@@ -12,11 +12,26 @@ p, h1{
 }
 p{
     font-size: 65px;
-    
 }
 h1{
     margin-bottom: 5px;
 }
+a{
+    color: #FB2576;
+    text-decoration: none;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.footer-elements{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top:45px;
+}
+.footer-git:hover{
+    transform: rotate(180deg) scale(1.1);
+}
+
 
 .warm-tones > button{
     padding: 15px 20px;
@@ -43,7 +58,6 @@ h1{
     background-color: #ca8aff;
     color: rgba(45,47,205,1) ;
 }
-
 .panel, .pen-color, .additional-options{
     display: flex;
     flex-direction: column;
@@ -54,7 +68,6 @@ h1{
     width: 50%;
     table-layout: fixed;
 }
-
 .minSquare{
     height: 48px;
     width: 48px;
@@ -62,7 +75,6 @@ h1{
     background-color: white;
     border-collapse: collapse;
 }
-
 .midSquare{
     height: 35.5px;
     width: 35.5px;
@@ -70,7 +82,6 @@ h1{
     background-color: white;
     border-collapse: collapse;
 }
-
 .largeSquare{
     height: 16.75px;
     width: 16.75px;
@@ -78,29 +89,26 @@ h1{
     background-color: white;
     border-collapse: collapse;
 }
-
 .grid { 
     display: flex;
     justify-content: center;
     margin-top: 80px;
     border-color: rgb(184, 72, 184);
     box-shadow: 0 0 2rem rgb(184, 72, 184);
-
+    
+    /* make grid non-draggable*/
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-
 .page-content{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 50px;
-
 }
-
 .yellow{
     background-color: yellow;
 }
@@ -128,11 +136,9 @@ h1{
 .black{
     background-color: rgb(92, 86, 86);
 }
-
 .eraser{
     background-color: white;
 }
-
 .party{
     animation: 10000ms ease-in-out infinite color-change;
 }
