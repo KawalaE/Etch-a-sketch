@@ -25,7 +25,7 @@ function drawSquares(squareInfo){
 
 function createGrid(resolution, squareDimension){
     let grid = document.createElement('div');
-    grid.classList.add('grid')
+    grid.classList.add('grid');
     pageContent.appendChild(grid);
 
     for (let i = 0; i < resolution; i++){
@@ -39,6 +39,7 @@ function createGrid(resolution, squareDimension){
         }
 
     }
+
 }
 
 function colorChoice(){
