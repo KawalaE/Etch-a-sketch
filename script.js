@@ -5,6 +5,15 @@ let colorClass = 'black';
 let child = document.getElementsByClassName('grid');
 let pageContent = document.querySelector('.page-content');
 let clearAll = document.querySelector('.clear-all');
+let rainbowMode = 0;
+
+
+function randomColor(){
+    let colors = ["yellow","orange","red", "blue", "green", "purple", "pink", "brown", "black"];
+    let randomNumber = Math.floor(Math.random()*8);
+    colorClass = colors[randomNumber];
+    return colorClass;
+}
 
 function drawSquares(squareInfo){
     document.addEventListener('mousedown', () => mouseDown = 1);
@@ -13,12 +22,14 @@ function drawSquares(squareInfo){
     let squares = document.querySelectorAll(squareInfo);
     squares.forEach((square) => {
         square.addEventListener('click', () => {
-        square.classList.remove("yellow","orange","red", "blue", "green", "purple", "pink", "brown", "black", "eraser", "party");
-        square.classList.add(colorClass)});
-        console.log(square.classList);
+            if(rainbowMode){colorClass = randomColor()}
+            square.classList.remove("yellow","orange","red", "blue", "green", "purple", "pink", "brown", "black", "eraser", "party", "rainbow");
+            square.classList.add(colorClass)});
+            
         square.addEventListener('mouseover', () => {
             if(mouseDown){
-                square.classList.remove("yellow","orange","red", "blue", "green", "purple", "pink", "brown", "black", "eraser", "party");
+                if(rainbowMode){colorClass = randomColor()}
+                square.classList.remove("yellow","orange","red", "blue", "green", "purple", "pink", "brown", "black", "eraser", "party", "rainbow");
                 square.classList.add(colorClass)}});
     })
 }
@@ -43,37 +54,73 @@ function createGrid(resolution, squareDimension){
 function colorChoice(){
 
     let yellow = document.querySelector('.yellow');
-    yellow.addEventListener('click', () => colorClass = 'yellow');
+    yellow.addEventListener('click', () => {
+        colorClass = 'yellow';
+        rainbowMode = 0;
+    });
 
     let orange = document.querySelector('.orange');
-    orange.addEventListener('click', () => colorClass = 'orange');
+    orange.addEventListener('click', () => {
+        colorClass = 'orange';
+        rainbowMode = 0;
+    });
 
     let red = document.querySelector('.red');
-    red.addEventListener('click', () => colorClass = 'red');
+    red.addEventListener('click', () => {
+        colorClass = 'red';
+        rainbowMode = 0;
+    });
 
     let blue = document.querySelector('.blue');
-    blue.addEventListener('click', () => colorClass = 'blue');
+    blue.addEventListener('click', () => {
+        colorClass = 'blue';
+        rainbowMode = 0;
+    });
 
     let green = document.querySelector('.green');
-    green.addEventListener('click', () => colorClass = 'green');
+    green.addEventListener('click', () => {
+        colorClass = 'green';
+        rainbowMode = 0;
+    });
 
     let purple = document.querySelector('.purple');
-    purple.addEventListener('click', () => colorClass = 'purple');
+    purple.addEventListener('click', () => {
+        colorClass = 'purple';
+        rainbowMode = 0
+    });
 
     let pink = document.querySelector('.pink');
-    pink.addEventListener('click', () => colorClass = 'pink');
+    pink.addEventListener('click', () => {
+        colorClass = 'pink';
+        rainbowMode = 0;
+    });
 
     let brown = document.querySelector('.brown');
-    brown.addEventListener('click', () => colorClass = 'brown');
+    brown.addEventListener('click', () => {
+        colorClass = 'brown';
+        rainbowMode = 0;
+    });
 
     let black = document.querySelector('.black');
-    black.addEventListener('click', () => colorClass = 'black');
+    black.addEventListener('click', () => {
+        colorClass = 'black';
+        rainbowMode = 0;
+    });
 
     let eraser = document.querySelector('.eraser');
-    eraser.addEventListener('click', () => colorClass = 'eraser'); 
+    eraser.addEventListener('click', () => {
+        colorClass = 'eraser';
+        rainbowMode = 0;
+    }); 
     
     let party = document.querySelector('.party');
-    party.addEventListener('click', () => colorClass = 'party');
+    party.addEventListener('click', () => {
+        colorClass = 'party';
+        rainbowMode = 0;
+    });
+
+    let rainbow = document.querySelector('.rainbow');
+    rainbow.addEventListener('click', () => rainbowMode = 1);
 
 }
 

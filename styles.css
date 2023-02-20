@@ -1,6 +1,7 @@
 body{
     background-image: radial-gradient(circle, rgba(148,60,218,1) 0%, rgba(45,47,205,1) 100%);;
 }
+
 p, h1{
     text-shadow: 2px 2px rgb(62, 30, 151);
     color: #FB2576;
@@ -15,21 +16,6 @@ p{
 }
 h1{
     margin-bottom: 5px;
-}
-a{
-    color: #FB2576;
-    text-decoration: none;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.footer-elements{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top:45px;
-}
-.footer-git:hover{
-    transform: rotate(180deg) scale(1.1);
 }
 
 
@@ -52,11 +38,18 @@ a{
     background-color: #ca8aff;
     color: rgba(45,47,205,1) ;
 }
+.resolution > button:hover{
+    background-color: #dcbdf5;
+}
 .additional-options > button{
     padding: 10px 15px;
     border-radius: 25%;
     background-color: #ca8aff;
     color: rgba(45,47,205,1) ;
+}
+.additional-options > button:hover{
+    background-color: #dcbdf5;
+
 }
 .panel, .pen-color, .additional-options{
     display: flex;
@@ -125,7 +118,7 @@ a{
     background-color: #2ef8a0;
 }
 .purple{
-    background-color:  #f82d97;
+    background-color:  #e02df8;
 }
 .pink{
     background-color: #f82d97;
@@ -141,6 +134,23 @@ a{
 }
 .party{
     animation: 10000ms ease-in-out infinite color-change;
+    
+}
+/*footer CSS*/
+a{
+    color: #FB2576;
+    text-decoration: none;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.footer-elements{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    margin-top: 35px;
+}
+.footer-git:hover{
+    transform: rotate(180deg) scale(1.1);
 }
 
 @keyframes color-change {
