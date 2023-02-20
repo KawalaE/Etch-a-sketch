@@ -19,16 +19,19 @@ h1{
 .warm-tones > button, .cold-tones > button, .other > button{
     padding: 15px 20px;
     border-radius: 25%;
+    border-color: antiquewhite;
 }
 .warm-tones > button:hover, .cold-tones > button:hover, .other > button:hover{
     filter: brightness(150%);
     transform: scale(1.05);
+    border-color: antiquewhite;
 }
 .resolution > button, .additional-options > button {
     padding: 10px 15px;
     border-radius: 25%;
     background-color: #ca8aff;
     color: rgba(45,47,205,1) ;
+    border-color: antiquewhite;
 }
 .additional-options > button:hover, .resolution > button:hover{
     background-color: #dcbdf5;
@@ -43,6 +46,7 @@ h1{
 .additional-options > button{
     width: 50%;
     table-layout: fixed;
+    border-color: antiquewhite;
 }
 .minSquare{
     height: 48px;

@@ -5,7 +5,7 @@ let colorClass = 'black';
 let child = document.getElementsByClassName('grid');
 let pageContent = document.querySelector('.page-content');
 let clearAll = document.querySelector('.clear-all');
-let rainbowMode = 0;
+let randomMode = 0;
 
 /*rainbow mode*/
 function randomColor(){
@@ -22,13 +22,13 @@ function drawSquares(squareInfo){
     let squares = document.querySelectorAll(squareInfo);
     squares.forEach((square) => {
         square.addEventListener('click', () => {
-            if(rainbowMode){colorClass = randomColor()}
+            if(randomMode){colorClass = randomColor()}
             square.classList.remove("yellow","orange","red", "blue", "green", "purple", "pink", "brown", "black", "eraser", "party", "rainbow");
             square.classList.add(colorClass)});
             
         square.addEventListener('mouseover', () => {
             if(mouseDown){
-                if(rainbowMode){colorClass = randomColor()}
+                if(randomMode){colorClass = randomColor()}
                 square.classList.remove("yellow","orange","red", "blue", "green", "purple", "pink", "brown", "black", "eraser", "party", "rainbow");
                 square.classList.add(colorClass)}});
     })
@@ -55,7 +55,7 @@ function colorChoice(){
 
     function setSquareCollor(e){
         colorClass = e;
-        rainbowMode = 0;
+        randomMode = 0;
     }
 
     let yellow = document.querySelector('.yellow');
@@ -91,8 +91,8 @@ function colorChoice(){
     let party = document.querySelector('.party');
     party.addEventListener('click', () => setSquareCollor('party'));
 
-    let rainbow = document.querySelector('.rainbow');
-    rainbow.addEventListener('click', () => rainbowMode = 1);
+    let random = document.querySelector('.random');
+    random.addEventListener('click', () => randomMode = 1);
 }
 
 /* handles drawing grid */
