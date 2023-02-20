@@ -1,7 +1,6 @@
 body{
     background-image: radial-gradient(circle, rgba(148,60,218,1) 0%, rgba(45,47,205,1) 100%);;
 }
-
 p, h1{
     text-shadow: 2px 2px rgb(62, 30, 151);
     color: #FB2576;
@@ -17,7 +16,6 @@ p{
 h1{
     margin-bottom: 5px;
 }
-
 .warm-tones > button, .cold-tones > button, .other > button{
     padding: 15px 20px;
     border-radius: 25%;
@@ -36,7 +34,6 @@ h1{
     background-color: #dcbdf5;
     transform: scale(1.05);
 }
-
 .panel, .pen-color, .additional-options{
     display: flex;
     flex-direction: column;

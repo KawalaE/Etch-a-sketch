@@ -7,7 +7,7 @@ let pageContent = document.querySelector('.page-content');
 let clearAll = document.querySelector('.clear-all');
 let rainbowMode = 0;
 
-
+/*rainbow mode*/
 function randomColor(){
     let colors = ["yellow","orange","red", "blue", "green", "purple", "pink", "brown", "black"];
     let randomNumber = Math.floor(Math.random()*8);
@@ -50,80 +50,52 @@ function createGrid(resolution, squareDimension){
         }
     }
 }
-
+/* handles color panel */
 function colorChoice(){
 
-    let yellow = document.querySelector('.yellow');
-    yellow.addEventListener('click', () => {
-        colorClass = 'yellow';
+    function setSquareCollor(e){
+        colorClass = e;
         rainbowMode = 0;
-    });
+    }
+
+    let yellow = document.querySelector('.yellow');
+    yellow.addEventListener('click', () => setSquareCollor('yellow'));
 
     let orange = document.querySelector('.orange');
-    orange.addEventListener('click', () => {
-        colorClass = 'orange';
-        rainbowMode = 0;
-    });
+    orange.addEventListener('click', () => setSquareCollor('orange'));
 
     let red = document.querySelector('.red');
-    red.addEventListener('click', () => {
-        colorClass = 'red';
-        rainbowMode = 0;
-    });
+    red.addEventListener('click', () => setSquareCollor('red'));
 
     let blue = document.querySelector('.blue');
-    blue.addEventListener('click', () => {
-        colorClass = 'blue';
-        rainbowMode = 0;
-    });
+    blue.addEventListener('click', () => setSquareCollor('blue'));
 
     let green = document.querySelector('.green');
-    green.addEventListener('click', () => {
-        colorClass = 'green';
-        rainbowMode = 0;
-    });
+    green.addEventListener('click', () => setSquareCollor('green'));
 
     let purple = document.querySelector('.purple');
-    purple.addEventListener('click', () => {
-        colorClass = 'purple';
-        rainbowMode = 0
-    });
+    purple.addEventListener('click', () => setSquareCollor('purple'));
 
     let pink = document.querySelector('.pink');
-    pink.addEventListener('click', () => {
-        colorClass = 'pink';
-        rainbowMode = 0;
-    });
+    pink.addEventListener('click', () => setSquareCollor('pink'));
 
     let brown = document.querySelector('.brown');
-    brown.addEventListener('click', () => {
-        colorClass = 'brown';
-        rainbowMode = 0;
-    });
+    brown.addEventListener('click', () => setSquareCollor('brown'));
 
     let black = document.querySelector('.black');
-    black.addEventListener('click', () => {
-        colorClass = 'black';
-        rainbowMode = 0;
-    });
+    black.addEventListener('click', () => setSquareCollor('black'));
 
     let eraser = document.querySelector('.eraser');
-    eraser.addEventListener('click', () => {
-        colorClass = 'eraser';
-        rainbowMode = 0;
-    }); 
+    eraser.addEventListener('click', () => setSquareCollor('eraser'));
     
     let party = document.querySelector('.party');
-    party.addEventListener('click', () => {
-        colorClass = 'party';
-        rainbowMode = 0;
-    });
+    party.addEventListener('click', () => setSquareCollor('party'));
 
     let rainbow = document.querySelector('.rainbow');
     rainbow.addEventListener('click', () => rainbowMode = 1);
-
 }
 
+/* handles drawing grid */
 numOfSquares = 12;
 createGrid(numOfSquares, 'minSquare');
 drawSquares('.minSquare');
@@ -150,6 +122,7 @@ function drawLargeGrid(){
     drawSquares('.largeSquare');
 }
 
+/* handles clear all button */
 let smallSquare = document.querySelector('.res12');
 smallSquare.addEventListener('click', () => {
     drawSmallGrid();
