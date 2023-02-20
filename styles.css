@@ -19,38 +19,25 @@ h1{
 }
 
 
-.warm-tones > button{
+.warm-tones > button, .cold-tones > button, .other > button{
     padding: 15px 20px;
     border-radius: 25%;
 }
-.cold-tones > button{
-    padding: 15px 20px;
-    border-radius: 25%;
+.warm-tones > button:hover, .cold-tones > button:hover, .other > button:hover{
+    filter: brightness(150%);
+    transform: scale(1.05);
 }
-
-.other > button{
-    padding: 15px 20px;
-    border-radius: 25%;
-}
-.resolution > button{
+.resolution > button, .additional-options > button {
     padding: 10px 15px;
     border-radius: 25%;
     background-color: #ca8aff;
     color: rgba(45,47,205,1) ;
 }
-.resolution > button:hover{
+.additional-options > button:hover, .resolution > button:hover{
     background-color: #dcbdf5;
+    transform: scale(1.05);
 }
-.additional-options > button{
-    padding: 10px 15px;
-    border-radius: 25%;
-    background-color: #ca8aff;
-    color: rgba(45,47,205,1) ;
-}
-.additional-options > button:hover{
-    background-color: #dcbdf5;
 
-}
 .panel, .pen-color, .additional-options{
     display: flex;
     flex-direction: column;
@@ -151,6 +138,7 @@ a{
 }
 .footer-git:hover{
     transform: rotate(180deg) scale(1.1);
+    filter: brightness(300%);
 }
 
 @keyframes color-change {
