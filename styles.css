@@ -18,7 +18,6 @@ h1{
     margin-bottom: 5px;
 }
 
-
 .warm-tones > button, .cold-tones > button, .other > button{
     padding: 15px 20px;
     border-radius: 25%;
@@ -51,28 +50,27 @@ h1{
 .minSquare{
     height: 48px;
     width: 48px;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.295);
     background-color: white;
     border-collapse: collapse;
 }
 .midSquare{
     height: 35.5px;
     width: 35.5px;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.295);
     background-color: white;
     border-collapse: collapse;
 }
 .largeSquare{
     height: 16.75px;
     width: 16.75px;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.295);
     background-color: white;
     border-collapse: collapse;
 }
 .grid { 
     display: flex;
     justify-content: center;
-    margin-top: 80px;
     border-color: rgb(184, 72, 184);
     box-shadow: 0 0 2rem rgb(184, 72, 184);
     
@@ -87,6 +85,8 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 80px;
+    flex-wrap: wrap;
     gap: 50px;
 }
 .yellow{
